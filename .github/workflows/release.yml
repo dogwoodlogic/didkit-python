@@ -31,7 +31,7 @@ jobs:
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
-          name: wheels-${{ matrix.python-version }}-${{matrix.target}}
+          name: macos-wheels-${{ matrix.python-version }}-${{matrix.target}}
           path: dist
 
   windows:
@@ -55,7 +55,7 @@ jobs:
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
-          name: wheels-${{ matrix.python-version }}-${{matrix.target}}
+          name: windows-wheels-${{ matrix.python-version }}-${{matrix.target}}
           path: dist
 
   linux:
@@ -80,7 +80,7 @@ jobs:
     - name: Upload wheels
       uses: actions/upload-artifact@v4
       with:
-        name: wheels-${{ matrix.python-version }}-${{matrix.target}}
+        name: linux-wheels-${{ matrix.python-version }}-${{matrix.target}}
         path: dist
 
   # TODO Add pypy
