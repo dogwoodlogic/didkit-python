@@ -1,5 +1,7 @@
 [project]
-name = "didkit"
+name = "dlinc-didkit"                   # <-- PyPI dist name
+version = "0.1.0"
+description = "Fork of spruceid/didkit-python maintained by dLinc. Library for Verifiable Credentials and Decentralized Identifiers."
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Rust",
@@ -8,16 +10,16 @@ classifiers = [
     "Topic :: Security",
 ]
 
-# [project.urls]
-# homepage = "https://github.com/spruceid/didkit-python"
-# documentation = "https://github.com/spruceid/didkit-python"
-# repository = "https://github.com/spruceid/didkit-python"
+[project.urls]
+Homepage = "https://github.com/dogwoodlogic/didkit-python"
+Source = "https://github.com/dogwoodlogic/didkit-python"
+Issues = "https://github.com/dogwoodlogic/didkit-python/issues"
+Upstream = "https://github.com/spruceid/didkit-python"
 
 [tool.poetry]
-name = "didkit"
+name = "dlinc-didkit"                   # keep in sync with [project].name
 version = "0.1.0"
-description = "Library for Verifiable Credentials and Decentralized Identifiers."
-authors = [ "Spruce Systems, Inc." ]
+description = "Fork of spruceid/didkit-python. Library for Verifiable Credentials and Decentralized Identifiers."
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -30,3 +32,7 @@ pytest-asyncio = "^0.20.3"
 [build-system]
 requires = ["maturin>=0.14,<0.15"]
 build-backend = "maturin"
+
+[tool.maturin]
+# Critical - This keeps the Python import as 'didkit'
+module-name = "didkit"
