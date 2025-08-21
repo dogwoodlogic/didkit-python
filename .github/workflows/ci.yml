@@ -29,8 +29,10 @@ jobs:
           args: --find-interpreter
       - name: Install poetry
         uses: abatilo/actions-poetry@v4
-      - name: Run Tests
+      - uses: dtolnay/rust-toolchain@stable
+        with: { toolchain: stable }
+      - name: Install deps & test
         run: |
-          poetry install
+          poetry install --no-root
           poetry run maturin develop
           poetry run pytest
