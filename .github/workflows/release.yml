@@ -94,6 +94,7 @@ jobs:
         with:
           pattern: '*'
           merge-multiple: true
+          path: dist
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Upload with twine
@@ -102,4 +103,4 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           python -m pip install --upgrade twine
-          twine upload --skip-existing *
+          twine upload --skip-existing dist/*

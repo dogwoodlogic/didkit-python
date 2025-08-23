@@ -1,6 +1,6 @@
 [project]
 name = "dlinc-didkit"                   # <-- PyPI dist name
-version = "0.1.0"
+version = "0.1.1"
 description = "Fork of spruceid/didkit-python maintained by dLinc. Library for Verifiable Credentials and Decentralized Identifiers."
 requires-python = ">=3.7"
 classifiers = [
@@ -18,7 +18,7 @@ Upstream = "https://github.com/spruceid/didkit-python"
 
 [tool.poetry]
 name = "dlinc-didkit"                   # keep in sync with [project].name
-version = "0.1.0"
+version = "0.1.1"
 description = "Fork of spruceid/didkit-python. Library for Verifiable Credentials and Decentralized Identifiers."
 
 [tool.poetry.dependencies]
